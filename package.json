@@ -9,7 +9,8 @@
         "babelify",
         {
           "presets": [
-            "@babel/preset-env"
+            "@babel/preset-env",
+            "@babel/preset-react"
           ]
         }
       ]
@@ -24,11 +25,14 @@
   },
   "dependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.0",
+    "@babel/preset-react": "^7.0.0",
     "babelify": "^10.0.0",
     "nodemon": "^1.18.9",
     "watchify": "^3.11.0"
