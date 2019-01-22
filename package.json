@@ -9,23 +9,28 @@
         "babelify",
         {
           "presets": [
-            "es2015"
+            "@babel/preset-env"
           ]
         }
       ]
     ]
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "node test.js",
     "build": "NODE_ENV=production browserify src/index.js | uglifyjs -cm > public/bundle.js",
-    "watch": "watchify src/index.js -o public/bundle.js -dv"
+    "watch": "watchify src/index.js -o public/bundle.js -dv",
+    "dev": "npm run start && npm run watch"
   },
   "dependencies": {
-    "babelify": "^10.0.0",
-    "browserify": "^16.2.3",
     "ejs": "^2.5.6",
-    "express": "^4.15.2",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.0",
+    "babelify": "^10.0.0",
+    "nodemon": "^1.18.9",
     "watchify": "^3.11.0"
   }
 }
